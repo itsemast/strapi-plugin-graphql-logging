@@ -10,17 +10,6 @@ npm i strapi-plugin-graphql-logging
 yarn add strapi-plugin-graphql-logging
 ```
 
-If `config/plugins.js` or `config/plugins.ts` doesn't exist, create the file with the following content:
-
-```typescript
-export default ({ env }) => ({
-    'graphql-logging': {
-      enabled: true,
-      resolve: './node_modules/strapi-plugin-graphql-logging',
-    },
-  });
-```
-
 Add `'plugin::graphql-logging.logger'` to `config/middlewares.js` or `config/middlewares.ts`, so it looks something like this:
 
 ```typescript
