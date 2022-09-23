@@ -1,6 +1,6 @@
 {
   "name": "strapi-plugin-graphql-logging",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Logging of GraphQL queries and responses with syntax highlighting",
   "strapi": {
     "name": "graphql-logging",
