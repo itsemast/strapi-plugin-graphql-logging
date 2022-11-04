@@ -1,9 +1,9 @@
 {
   "name": "strapi-plugin-graphql-logging",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Logging of GraphQL queries and responses with syntax highlighting",
   "strapi": {
-    "name": "graphql-logging",
+    "name": "GraphQL Logging",
     "description": "Logging of GraphQL queries and responses with syntax highlighting",
     "kind": "plugin"
   },
@@ -33,5 +33,21 @@
     "develop": "tsc -w",
     "build": "tsc"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "strapi",
+    "graphql",
+    "logging",
+    "debug",
+    "syntax",
+    "highlight"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsemast/strapi-plugin-graphql-logging.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsemast/strapi-plugin-graphql-logging/issues"
+  },
+  "homepage": "https://github.com/itsemast/strapi-plugin-graphql-logging#readme"
 }
