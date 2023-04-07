@@ -6,10 +6,10 @@ import { Highlighter } from '../highlighter';
  */
 
 export default async (ctx, next) => {
+  await next();
+
   // only log graphql post requests
   if (ctx.request.url === '/graphql' && ctx.request.method === 'POST') {
-    await next();
-
     const query = ctx.request.body?.query;
 
     // don't print huge introspection queries
@@ -22,7 +22,5 @@ export default async (ctx, next) => {
       console.log(Highlighter.highlight(query, "graphql"));
       console.log(Highlighter.highlight(resp, "json"));
     }
-  } else {
-    await next();
   }
 };
