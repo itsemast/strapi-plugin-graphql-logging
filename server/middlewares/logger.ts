@@ -16,9 +16,11 @@ export default async (ctx, next) => {
     if (query.startsWith("query IntrospectionQuery ")) {
       console.log("Introspection query ignored");
     } else {
+      // format response for better readability
+      const resp = JSON.stringify(JSON.parse(ctx.body), null, "  ");
       // print highlighted query and response
       console.log(Highlighter.highlight(query, "graphql"));
-      console.log(Highlighter.highlight(ctx.body, "json"));
+      console.log(Highlighter.highlight(resp, "json"));
     }
   } else {
     await next();
